@@ -1,0 +1,33 @@
+name: Update School Lunch Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate calendar
+        run: python generate_calendar.py
+
+      - name: Commit calendar
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add school-lunch.ics
+          git diff --cached --quiet || git commit -m "Update school lunch calendar"
+          git push
