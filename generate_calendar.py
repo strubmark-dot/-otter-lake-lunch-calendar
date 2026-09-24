@@ -10,30 +10,36 @@ MENU_TYPE = "lunch"
 
 
 # ---------------------------------------------------------
-# Get this week's Nutrislice menu
-# ---------------------------------------------------------
-
-today = datetime.now().date()
-monday = today - timedelta(days=today.weekday())
-
-url = (
-    f"https://{DISTRICT}.api.nutrislice.com/menu/api/weeks/"
-    f"school/{SCHOOL}/menu-type/{MENU_TYPE}/"
-    f"{monday.year}/{monday.month:02d}/{monday.day:02d}/"
-)
-
-request = urllib.request.Request(
-    url,
-    headers={"User-Agent": "Otter-Lake-Lunch-Calendar/1.0"}
-)
-
-with urllib.request.urlopen(request, timeout=20) as response:
-    data = json.loads(response.read().decode("utf-8"))
-
-
-# ---------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------
+
+def get_week_menu(monday):
+    """
+    Download one week's menu from Nutrislice.
+    """
+
+    url = (
+        f"https://{DISTRICT}.api.nutrislice.com/menu/api/weeks/"
+        f"school/{SCHOOL}/menu-type/{MENU_TYPE}/"
+        f"{monday.year}/{monday.month:02d}/{monday.day:02d}/"
+    )
+
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Otter-Lake-Lunch-Calendar/1.0"
+        }
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=20
+    ) as response:
+
+        return json.loads(
+            response.read().decode("utf-8")
+        )
+
 
 def get_food_name(item):
     food = item.get("food")
@@ -46,8 +52,9 @@ def get_food_name(item):
 
 def escape_ics(text):
     """
-    Escape characters required by the iCalendar format.
+    Escape characters required by iCalendar.
     """
+
     if not text:
         return ""
 
@@ -62,7 +69,8 @@ def escape_ics(text):
 
 def is_choice_heading(item):
     """
-    Detect headings such as:
+    Detect Nutrislice section headings such as:
+
     Choice 1
     Choice 2
     Choice 3
@@ -71,7 +79,13 @@ def is_choice_heading(item):
     text = (item.get("text") or "").strip()
 
     return (
-        bool(re.match(r"^choice\s+\d+$", text, re.IGNORECASE))
+        bool(
+            re.match(
+                r"^choice\s+\d+$",
+                text,
+                re.IGNORECASE
+            )
+        )
         or (
             item.get("is_section_title") is True
             and text.lower().startswith("choice ")
@@ -93,266 +107,362 @@ def get_choice_number(text):
 
 
 # ---------------------------------------------------------
+# Get current week AND next week
+# ---------------------------------------------------------
+
+today = datetime.now().date()
+
+current_monday = (
+    today -
+    timedelta(days=today.weekday())
+)
+
+next_monday = (
+    current_monday +
+    timedelta(days=7)
+)
+
+
+print(
+    f"Fetching week of {current_monday}..."
+)
+
+current_week = get_week_menu(current_monday)
+
+
+print(
+    f"Fetching week of {next_monday}..."
+)
+
+next_week = get_week_menu(next_monday)
+
+
+# Combine both weeks
+all_weeks = [
+    current_week,
+    next_week
+]
+
+
+# ---------------------------------------------------------
 # Build calendar events
 # ---------------------------------------------------------
 
 events = []
 
 
-for day in data.get("days", []):
+for week_data in all_weeks:
 
-    date_string = day.get("date")
+    for day in week_data.get("days", []):
 
-    if not date_string:
-        continue
+        date_string = day.get("date")
 
-
-    menu_items = day.get("menu_items", [])
-
-
-    # -----------------------------------------------------
-    # First, organize the menu according to Nutrislice's
-    # actual Choice 1 / Choice 2 / Choice 3 headings.
-    # -----------------------------------------------------
-
-    choices = {}
-    current_choice = None
-
-    all_menu_lines = []
-
-
-    for item in menu_items:
-
-        text = (item.get("text") or "").strip()
-        food_name = get_food_name(item)
-
-
-        # Detect Choice 1 / Choice 2 / Choice 3
-        if is_choice_heading(item):
-
-            current_choice = get_choice_number(text)
-
-            if current_choice is not None:
-                choices.setdefault(current_choice, [])
-
-                all_menu_lines.append(text)
-
+        if not date_string:
             continue
 
 
-        # Add food to the currently active choice
-        if food_name:
-
-            if current_choice is not None:
-                if food_name not in choices[current_choice]:
-                    choices[current_choice].append(food_name)
-
-            all_menu_lines.append(food_name)
-
-        elif text:
-            # Things like "with", "or", etc.
-            all_menu_lines.append(text)
+        menu_items = day.get("menu_items", [])
 
 
-    # -----------------------------------------------------
-    # Determine the main choices.
-    #
-    # We use the FIRST food listed under each Choice.
-    #
-    # Example:
-    #
-    # Choice 1
-    #   Beef Taco Meat
-    #   with
-    #   Tostitos Scoops
-    #   Nacho Cheese
-    #
-    # Choice 2
-    #   LOCAL Lentil Sambusa
-    #
-    # becomes:
-    #
-    # Choice 1: Beef Taco Meat
-    # Choice 2: LOCAL Lentil Sambusa
-    # -----------------------------------------------------
+        # -------------------------------------------------
+        # Organize items according to Choice headings
+        # -------------------------------------------------
 
-    choice_1 = choices.get(1, [])
-    choice_2 = choices.get(2, [])
-    choice_3 = choices.get(3, [])
+        choices = {}
 
+        current_choice = None
 
-    summary_parts = []
+        all_menu_lines = []
 
-
-    if choice_1:
-        summary_parts.append(
-            f"Choice 1: {choice_1[0]}"
-        )
-
-    if choice_2:
-        summary_parts.append(
-            f"Choice 2: {choice_2[0]}"
-        )
-
-    # We intentionally don't put Choice 3 in the calendar
-    # title because that is usually the deli/sandwich option.
-
-
-    # -----------------------------------------------------
-    # Fallback
-    #
-    # If Nutrislice doesn't provide Choice headings on a
-    # particular day, use the older entrée-detection method.
-    # -----------------------------------------------------
-
-    if not summary_parts:
-
-        food_items = []
 
         for item in menu_items:
 
-            name = get_food_name(item)
+            text = (
+                item.get("text") or ""
+            ).strip()
 
-            if name and name not in food_items:
-                food_items.append(name)
-
-
-        def is_side_or_drink(name):
-
-            lower = name.lower()
-
-            excluded_words = [
-                "milk",
-                "juice",
-                "water",
-                "fruit",
-                "vegetable",
-                "veggie",
-                "salad",
-                "side",
-                "cookie",
-                "dessert",
-                "bread",
-                "roll",
-                "naan",
-                "chips",
-                "tostitos",
-                "applesauce",
-                "condiment",
-                "ketchup",
-                "mustard",
-                "ranch",
-                "dressing",
-            ]
-
-            return any(
-                word in lower
-                for word in excluded_words
-            )
+            food_name = get_food_name(item)
 
 
-        entrees = [
-            item
-            for item in food_items
-            if not is_side_or_drink(item)
-        ]
+            # ---------------------------------------------
+            # Choice heading
+            # ---------------------------------------------
+
+            if is_choice_heading(item):
+
+                current_choice = (
+                    get_choice_number(text)
+                )
+
+                if current_choice is not None:
+
+                    choices.setdefault(
+                        current_choice,
+                        []
+                    )
+
+                    all_menu_lines.append(
+                        text
+                    )
+
+                continue
 
 
-        if len(entrees) >= 2:
+            # ---------------------------------------------
+            # Food item
+            # ---------------------------------------------
 
-            summary_parts = [
-                f"Choice 1: {entrees[0]}",
-                f"Choice 2: {entrees[1]}"
-            ]
+            if food_name:
 
-        elif len(entrees) == 1:
+                if current_choice is not None:
 
-            summary_parts = [
-                f"Choice 1: {entrees[0]}"
-            ]
+                    if food_name not in choices[
+                        current_choice
+                    ]:
 
-        elif food_items:
+                        choices[
+                            current_choice
+                        ].append(
+                            food_name
+                        )
 
-            summary_parts = [
-                food_items[0]
-            ]
-
-
-    # -----------------------------------------------------
-    # Calendar title
-    # -----------------------------------------------------
-
-    if summary_parts:
-        summary = " | ".join(summary_parts)
-    else:
-        summary = "Otter Lake School Lunch"
-
-
-    # -----------------------------------------------------
-    # Calendar description
-    #
-    # Keep the complete menu available when the event is
-    # opened.
-    # -----------------------------------------------------
-
-    description_lines = [
-        "Otter Lake School Lunch",
-        ""
-    ]
-
-    if choice_1:
-        description_lines.append(
-            "Choice 1: " + " | ".join(choice_1)
-        )
-
-    if choice_2:
-        description_lines.append(
-            "Choice 2: " + " | ".join(choice_2)
-        )
-
-    if choice_3:
-        description_lines.append(
-            "Choice 3: " + " | ".join(choice_3)
-        )
-
-
-    # If there weren't Choice sections, show the full menu
-    if not choice_1 and not choice_2 and not choice_3:
-
-        description_lines.append("Full menu:")
-
-        for line in all_menu_lines:
-
-            if line:
-                description_lines.append(
-                    "• " + line
+                all_menu_lines.append(
+                    food_name
                 )
 
 
-    description = "\\n".join(description_lines)
+            # ---------------------------------------------
+            # Other text such as:
+            #
+            # with
+            # or
+            # ---------------------------------------------
+
+            elif text:
+
+                all_menu_lines.append(
+                    text
+                )
 
 
-    # -----------------------------------------------------
-    # Create all-day calendar event
-    # -----------------------------------------------------
+        # -------------------------------------------------
+        # Get actual choices
+        # -------------------------------------------------
 
-    date_obj = datetime.strptime(
-        date_string,
-        "%Y-%m-%d"
-    ).date()
-
-    next_date = date_obj + timedelta(days=1)
+        choice_1 = choices.get(1, [])
+        choice_2 = choices.get(2, [])
+        choice_3 = choices.get(3, [])
 
 
-    events.append(
-        f"""BEGIN:VEVENT
+        # -------------------------------------------------
+        # Build calendar title
+        # -------------------------------------------------
+
+        summary_parts = []
+
+
+        if choice_1:
+
+            summary_parts.append(
+                f"Choice 1: {choice_1[0]}"
+            )
+
+
+        if choice_2:
+
+            summary_parts.append(
+                f"Choice 2: {choice_2[0]}"
+            )
+
+
+        # -------------------------------------------------
+        # Fallback if Nutrislice doesn't provide
+        # Choice headings for a particular day
+        # -------------------------------------------------
+
+        if not summary_parts:
+
+            food_items = []
+
+
+            for item in menu_items:
+
+                name = get_food_name(item)
+
+                if name and name not in food_items:
+
+                    food_items.append(name)
+
+
+            def is_side_or_drink(name):
+
+                lower = name.lower()
+
+                excluded_words = [
+                    "milk",
+                    "juice",
+                    "water",
+                    "fruit",
+                    "vegetable",
+                    "veggie",
+                    "salad",
+                    "side",
+                    "cookie",
+                    "dessert",
+                    "bread",
+                    "roll",
+                    "naan",
+                    "chips",
+                    "tostitos",
+                    "applesauce",
+                    "condiment",
+                    "ketchup",
+                    "mustard",
+                    "ranch",
+                    "dressing",
+                ]
+
+                return any(
+                    word in lower
+                    for word in excluded_words
+                )
+
+
+            entrees = [
+                item
+                for item in food_items
+                if not is_side_or_drink(item)
+            ]
+
+
+            if len(entrees) >= 2:
+
+                summary_parts = [
+                    f"Choice 1: {entrees[0]}",
+                    f"Choice 2: {entrees[1]}"
+                ]
+
+            elif len(entrees) == 1:
+
+                summary_parts = [
+                    f"Choice 1: {entrees[0]}"
+                ]
+
+            elif food_items:
+
+                summary_parts = [
+                    food_items[0]
+                ]
+
+
+        # -------------------------------------------------
+        # Calendar title
+        # -------------------------------------------------
+
+        if summary_parts:
+
+            summary = " | ".join(
+                summary_parts
+            )
+
+        else:
+
+            summary = (
+                "Otter Lake School Lunch"
+            )
+
+
+        # -------------------------------------------------
+        # Event description
+        # -------------------------------------------------
+
+        description_lines = [
+            "Otter Lake School Lunch",
+            ""
+        ]
+
+
+        if choice_1:
+
+            description_lines.append(
+                "Choice 1: " +
+                " | ".join(choice_1)
+            )
+
+
+        if choice_2:
+
+            description_lines.append(
+                "Choice 2: " +
+                " | ".join(choice_2)
+            )
+
+
+        if choice_3:
+
+            description_lines.append(
+                "Choice 3: " +
+                " | ".join(choice_3)
+            )
+
+
+        # Add full menu if no Choice sections exist
+        if (
+            not choice_1
+            and not choice_2
+            and not choice_3
+        ):
+
+            description_lines.append(
+                "Full menu:"
+            )
+
+            for line in all_menu_lines:
+
+                if line:
+
+                    description_lines.append(
+                        "• " + line
+                    )
+
+
+        description = "\\n".join(
+            description_lines
+        )
+
+
+        # -------------------------------------------------
+        # Create all-day event
+        # -------------------------------------------------
+
+        date_obj = datetime.strptime(
+            date_string,
+            "%Y-%m-%d"
+        ).date()
+
+
+        next_date = (
+            date_obj +
+            timedelta(days=1)
+        )
+
+
+        events.append(
+            f"""BEGIN:VEVENT
 DTSTART;VALUE=DATE:{date_obj.strftime("%Y%m%d")}
 DTEND;VALUE=DATE:{next_date.strftime("%Y%m%d")}
 SUMMARY:{escape_ics(summary)}
 DESCRIPTION:{escape_ics(description)}
 UID:{date_string}-otter-lake-lunch@github
 END:VEVENT"""
-    )
+        )
+
+
+# ---------------------------------------------------------
+# Sort events chronologically
+# ---------------------------------------------------------
+
+events.sort()
 
 
 # ---------------------------------------------------------
@@ -369,6 +479,10 @@ X-WR-TIMEZONE:America/Chicago
 """ + "\n".join(events) + "\nEND:VCALENDAR\n"
 
 
+# ---------------------------------------------------------
+# Write calendar file
+# ---------------------------------------------------------
+
 with open(
     "school-lunch.ics",
     "w",
@@ -380,4 +494,8 @@ with open(
 
 print(
     f"Created calendar with {len(events)} lunch days."
+)
+
+print(
+    "Calendar includes the current week and next week."
 )
