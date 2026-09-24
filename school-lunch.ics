@@ -8,35 +8,35 @@ X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
-SUMMARY:🍎 Waffle Sticks
+SUMMARY:Choice 1: Waffle Sticks | Choice 2: Yogurt Cup Choices
 DESCRIPTION:Otter Lake School Lunch\n\n• Home Style Breaded Chicken Drumstick\n• Waffle Sticks\n• Yogurt Cup Choices\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• V Blend Juice\n• Sweet Potato Fries\n• Fresh Orange Slices\n• Chilled Blueberries\n• Syrup
 UID:2026-09-21-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
-SUMMARY:🍎 Chicken Tikka Masala
+SUMMARY:Choice 1: Chicken Tikka Masala | Choice 2: Brown Rice
 DESCRIPTION:Otter Lake School Lunch\n\n• Chicken Tikka Masala\n• Mini Naan\n• Brown Rice\n• Cheesy French Bread Dunker (v)\n• Marinara Sauce\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Fresh Cucumber Slices\n• Fresh Broccoli\n• 🌱LOCAL Pine Tree Apples\n• Chilled Pears
 UID:2026-09-22-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
-SUMMARY:🍎 Turkey Pepperoni Pizza Round
+SUMMARY:Choice 1: Turkey Pepperoni Pizza Round | Choice 2: Cheese Pizza Round (v)
 DESCRIPTION:Otter Lake School Lunch\n\n• Turkey Pepperoni Pizza Round\n• Cheese Pizza Round (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Seasoned Green Beans\n• Fresh Carrots\n• Fresh Melon Slices\n• Chilled Mixed Fruit
 UID:2026-09-23-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
-SUMMARY:🍎 Beef Taco Meat
+SUMMARY:Choice 1: Beef Taco Meat | Choice 2: Nacho Cheese
 DESCRIPTION:Otter Lake School Lunch\n\n• Beef Taco Meat\n• Tostitos Scoops\n• Nacho Cheese\n• 🌱LOCAL Lentil Sambusa (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Corn\n• Romaine Lettuce\n• Fresh Tomatoes\n• Fresh Banana\n• Chilled Applesauce Cup
 UID:2026-09-24-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
-SUMMARY:🍎 Mini Corn Dogs
+SUMMARY:Choice 1: Mini Corn Dogs | Choice 2: White Macaroni and Cheese
 DESCRIPTION:Otter Lake School Lunch\n\n• Mini Corn Dogs\n• White Macaroni and Cheese\n• Dinner Roll\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Baked Beans\n• Vegetable Choices\n• Fresh Fruit Choices\n• Froot Jooce Slushie
 UID:2026-09-25-otter-lake-lunch@github
 END:VEVENT
