@@ -32,7 +32,6 @@ def get_food_name(item):
 
 
 def is_side_or_drink(name):
-    """Items we don't want displayed as the main entrée."""
     lower = name.lower()
 
     excluded_words = [
@@ -81,25 +80,41 @@ for day in data.get("days", []):
     if not items:
         continue
 
-    # Find the first item that looks like a main entrée.
-    entrees = [item for item in items if not is_side_or_drink(item)]
+    # Identify the main entrée choices.
+    entrees = [
+        item for item in items
+        if not is_side_or_drink(item)
+    ]
 
-    if entrees:
-        main_item = entrees[0]
+    # Use up to the first two entrée choices.
+    choices = entrees[:2]
+
+    if len(choices) >= 2:
+        summary = (
+            f"Choice 1: {choices[0]} | "
+            f"Choice 2: {choices[1]}"
+        )
+    elif len(choices) == 1:
+        summary = f"Choice 1: {choices[0]}"
     else:
-        main_item = items[0]
+        summary = items[0]
 
-    # Put the complete menu in the event description.
-    description = "\\n".join(f"• {item}" for item in items)
+    # Complete menu remains in the event description.
+    description = "\\n".join(
+        f"• {item}" for item in items
+    )
 
-    date_obj = datetime.strptime(date_string, "%Y-%m-%d").date()
+    date_obj = datetime.strptime(
+        date_string, "%Y-%m-%d"
+    ).date()
+
     next_date = date_obj + timedelta(days=1)
 
     events.append(
         f"""BEGIN:VEVENT
 DTSTART;VALUE=DATE:{date_obj.strftime("%Y%m%d")}
 DTEND;VALUE=DATE:{next_date.strftime("%Y%m%d")}
-SUMMARY:🍎 {main_item}
+SUMMARY:{summary}
 DESCRIPTION:Otter Lake School Lunch\\n\\n{description}
 UID:{date_string}-otter-lake-lunch@github
 END:VEVENT"""
