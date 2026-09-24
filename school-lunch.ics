@@ -8,36 +8,36 @@ X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
-SUMMARY:🍎 Otter Lake School Lunch
-DESCRIPTION:• Home Style Breaded Chicken Drumstick\n• Waffle Sticks\n• Yogurt Cup Choices\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• V Blend Juice\n• Sweet Potato Fries\n• Fresh Orange Slices\n• Chilled Blueberries\n• Syrup
+SUMMARY:🍎 Waffle Sticks
+DESCRIPTION:Otter Lake School Lunch\n\n• Home Style Breaded Chicken Drumstick\n• Waffle Sticks\n• Yogurt Cup Choices\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• V Blend Juice\n• Sweet Potato Fries\n• Fresh Orange Slices\n• Chilled Blueberries\n• Syrup
 UID:2026-09-21-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
-SUMMARY:🍎 Otter Lake School Lunch
-DESCRIPTION:• Chicken Tikka Masala\n• Mini Naan\n• Brown Rice\n• Cheesy French Bread Dunker (v)\n• Marinara Sauce\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Fresh Cucumber Slices\n• Fresh Broccoli\n• 🌱LOCAL Pine Tree Apples\n• Chilled Pears
+SUMMARY:🍎 Chicken Tikka Masala
+DESCRIPTION:Otter Lake School Lunch\n\n• Chicken Tikka Masala\n• Mini Naan\n• Brown Rice\n• Cheesy French Bread Dunker (v)\n• Marinara Sauce\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Fresh Cucumber Slices\n• Fresh Broccoli\n• 🌱LOCAL Pine Tree Apples\n• Chilled Pears
 UID:2026-09-22-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
-SUMMARY:🍎 Otter Lake School Lunch
-DESCRIPTION:• Turkey Pepperoni Pizza Round\n• Cheese Pizza Round (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Seasoned Green Beans\n• Fresh Carrots\n• Fresh Melon Slices\n• Chilled Mixed Fruit
+SUMMARY:🍎 Turkey Pepperoni Pizza Round
+DESCRIPTION:Otter Lake School Lunch\n\n• Turkey Pepperoni Pizza Round\n• Cheese Pizza Round (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Seasoned Green Beans\n• Fresh Carrots\n• Fresh Melon Slices\n• Chilled Mixed Fruit
 UID:2026-09-23-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
-SUMMARY:🍎 Otter Lake School Lunch
-DESCRIPTION:• Beef Taco Meat\n• Tostitos Scoops\n• Nacho Cheese\n• 🌱LOCAL Lentil Sambusa (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Corn\n• Romaine Lettuce\n• Fresh Tomatoes\n• Fresh Banana\n• Chilled Applesauce Cup
+SUMMARY:🍎 Beef Taco Meat
+DESCRIPTION:Otter Lake School Lunch\n\n• Beef Taco Meat\n• Tostitos Scoops\n• Nacho Cheese\n• 🌱LOCAL Lentil Sambusa (v)\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Corn\n• Romaine Lettuce\n• Fresh Tomatoes\n• Fresh Banana\n• Chilled Applesauce Cup
 UID:2026-09-24-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
-SUMMARY:🍎 Otter Lake School Lunch
-DESCRIPTION:• Mini Corn Dogs\n• White Macaroni and Cheese\n• Dinner Roll\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Baked Beans\n• Vegetable Choices\n• Fresh Fruit Choices\n• Froot Jooce Slushie
+SUMMARY:🍎 Mini Corn Dogs
+DESCRIPTION:Otter Lake School Lunch\n\n• Mini Corn Dogs\n• White Macaroni and Cheese\n• Dinner Roll\n• Deli Sandwich Choices\n• Vegetarian Sandwich Choice\n• Baked Beans\n• Vegetable Choices\n• Fresh Fruit Choices\n• Froot Jooce Slushie
 UID:2026-09-25-otter-lake-lunch@github
 END:VEVENT
 END:VCALENDAR
