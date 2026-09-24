@@ -60,6 +60,21 @@ def is_side_or_drink(name):
 
     return any(word in lower for word in excluded_words)
 
+print("\n===== DEBUG MENU =====")
+
+for day in data.get("days", []):
+    if day.get("date"):
+        print(f"\nDATE: {day['date']}")
+
+        for i, item in enumerate(day.get("menu_items", [])):
+            print(
+                f"ITEM {i}: "
+                f"position={item.get('position')} | "
+                f"text={item.get('text')!r} | "
+                f"category={item.get('category')!r} | "
+                f"is_section_title={item.get('is_section_title')!r} | "
+                f"food={item.get('food', {}).get('name')!r}"
+            )
 
 events = []
 
