@@ -85,8 +85,8 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-SUMMARY:Choice 1: Beef Sloppy Joe on a Fresh Whole Grain Bun | Choice 2: Macaroni & Cheese (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Beef Sloppy Joe on a Fresh Whole Grain Bun\\nChoice 2: Macaroni & Cheese (v) | Dinner Roll\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Green Beans | Fresh Jicama Sticks | Fresh Banana | Chilled Applesauce Cup
+SUMMARY:Choice 1: Beef Sloppy Joe on a Fresh Bun | Choice 2: Macaroni & Cheese (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Beef Sloppy Joe on a Fresh Bun\\nChoice 2: Macaroni & Cheese (v) | Dinner Roll\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Green Beans | Fresh Jicama Sticks | Fresh Banana | Chilled Applesauce Cup
 UID:2026-10-08-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
