@@ -6,55 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Otter Lake School Lunch
 X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260927
-DTEND;VALUE=DATE:20260928
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-09-27-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Choice 1: Sausage\, Egg & Cheese Maple Breakfast Sandwich | Choice 2: Cheese Pizza Crunchers (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Sausage\, Egg & Cheese Maple Breakfast Sandwich\\nChoice 2: Cheese Pizza Crunchers (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Corn | Fresh Cucumber Slices | Fresh Orange Slices | Chilled Strawberries
-UID:2026-09-28-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Choice 1: Crunchy Chicken Strips | Choice 2: Homemade Bean and Cheese Burrito (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Crunchy Chicken Strips\\nChoice 2: Homemade Bean and Cheese Burrito (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Roasted Potatoes | Fresh Tomatoes | Fresh Apple Slices | Chilled Peaches
-UID:2026-09-29-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:Choice 1: Shredded Turkey Grilled Cheese | Choice 2: Crispy Breaded Mozzarella Sticks (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Shredded Turkey Grilled Cheese\\nChoice 2: Crispy Breaded Mozzarella Sticks (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Broccoli | Fresh Red Bell Pepper Strips | Fresh Banana | Chilled Pears
-UID:2026-09-30-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Choice 1: Fiestada Pizza | Choice 2: Cheese Pizza Boli (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Fiestada Pizza\\nChoice 2: Cheese Pizza Boli (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Texas Ranchero Beans (v) | Taco Salad | Fresh Pear | Chilled Mixed Fruit
-UID:2026-10-01-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
-SUMMARY:Choice 1: Cheeseburger | Choice 2: Chipotle Black Bean Burger (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Cheeseburger | Fresh Bun\\nChoice 2: Chipotle Black Bean Burger (v) | Fresh Bun\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Potato Smiles | Vegetable Choices | Fresh Fruit Choices | Chilled Applesauce Cup
-UID:2026-10-02-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-10-03-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:Otter Lake School Lunch
@@ -102,5 +53,54 @@ DTEND;VALUE=DATE:20261011
 SUMMARY:Otter Lake School Lunch
 DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
 UID:2026-10-10-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-10-11-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Choice 1: Chicken Sausage Patty | Choice 2: Colby Cheese Omelet
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Sausage Patty | French Toast Sticks | Syrup\\nChoice 2: Colby Cheese Omelet | French Toast Sticks (v) | Syrup\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Glazed Carrots | Fresh Cauliflower | Fresh Orange Slices | Cinnamon Apple Slices
+UID:2026-10-12-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Choice 1: Chicken Smackers | Choice 2: Fish Sticks
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Smackers\\nChoice 2: Fish Sticks\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Mashed Potatoes | Chicken Gravy | Fresh Carrots | Fresh Apple Slices | Chilled Mixed Fruit
+UID:2026-10-13-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:\\n• No School
+UID:2026-10-14-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:\\n• No School
+UID:2026-10-15-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:\\n• No School
+UID:2026-10-16-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-10-17-otter-lake-lunch@github
 END:VEVENT
 END:VCALENDAR
