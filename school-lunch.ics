@@ -22,8 +22,8 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
-SUMMARY:Choice 1: Teriyaki Meatballs with Ramen Noodles | Choice 2: Homemade Bean and Cheese Burrito (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Teriyaki Meatballs with Ramen Noodles\\nChoice 2: Homemade Bean and Cheese Burrito (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Roasted Potatoes | Fresh Tomatoes | Fresh Apple Slices | Chilled Mixed Fruit
+SUMMARY:Choice 1: Teriyaki Meatballs with Ramen Noodles | Choice 2: Cheese Filled Breadsticks (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Teriyaki Meatballs with Ramen Noodles\\nChoice 2: Cheese Filled Breadsticks (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Green Peas | Fresh Carrots | Fresh Grapes | Chilled Mixed Fruit
 UID:2026-10-06-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
