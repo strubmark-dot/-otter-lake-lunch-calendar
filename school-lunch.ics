@@ -78,8 +78,8 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-SUMMARY:Choice 1: 🌱 Local Cheesy Italian Burger | Choice 2: Cheese Pizza Round (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: 🌱 Local Cheesy Italian Burger\\nChoice 2: Cheese Pizza Round (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | 🌱LOCAL Honey Roasted Butternut Squash | Fresh Sweet Mini Peppers | 🌱LOCAL Pine Tree Apples | 🌱LOCAL JonnyPops Ice Cream Treat | Chilled Mixed Fruit
+SUMMARY:Choice 1: 🌱 Local Cheesy Italian Burger | Choice 2: Deep Dish Cheese Pizza (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: 🌱 Local Cheesy Italian Burger\\nChoice 2: Deep Dish Cheese Pizza (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | 🌱LOCAL Honey Roasted Butternut Squash | Fresh Sweet Mini Peppers | 🌱LOCAL Pine Tree Apples | 🌱LOCAL JonnyPops Ice Cream Treat | Chilled Mixed Fruit
 UID:2026-10-21-otter-lake-lunch@github
 END:VEVENT
 BEGIN:VEVENT
