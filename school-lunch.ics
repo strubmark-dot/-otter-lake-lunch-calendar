@@ -6,55 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Otter Lake School Lunch
 X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261018
-DTEND;VALUE=DATE:20261019
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-10-18-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Choice 1: Home Style Breaded Chicken Drumstick | Choice 2: Yogurt Cup Choices
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Home Style Breaded Chicken Drumstick | Waffle Sticks\\nChoice 2: Yogurt Cup Choices | Waffle Sticks\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | V Blend Juice | Sweet Potato Fries | Fresh Orange Slices | Chilled Blueberries | Syrup
-UID:2026-10-19-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
-SUMMARY:Choice 1: Chicken Tikka Masala | Choice 2: Cheesy French Bread Dunker (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Tikka Masala | Mini Naan | Brown Rice\\nChoice 2: Cheesy French Bread Dunker (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Fresh Cucumber Slices | Fresh Broccoli | Fresh Apple Slices | Chilled Pears
-UID:2026-10-20-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:Choice 1: 🌱 Local Cheesy Italian Burger | Choice 2: Deep Dish Cheese Pizza (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: 🌱 Local Cheesy Italian Burger\\nChoice 2: Deep Dish Cheese Pizza (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | 🌱LOCAL Honey Roasted Butternut Squash | Fresh Sweet Mini Peppers | 🌱LOCAL Pine Tree Apples | 🌱LOCAL JonnyPops Ice Cream Treat | Chilled Mixed Fruit
-UID:2026-10-21-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Choice 1: Beef Taco Meat | Choice 2: 🌱LOCAL Lentil Sambusa (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Beef Taco Meat | Tostitos Scoops | Nacho Cheese\\nChoice 2: 🌱LOCAL Lentil Sambusa (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Corn | Romaine Lettuce | Fresh Tomatoes | Fresh Banana | Chilled Applesauce Cup
-UID:2026-10-22-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Choice 1: Mini Corn Dogs | Choice 2: White Macaroni and Cheese
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Mini Corn Dogs\\nChoice 2: White Macaroni and Cheese | Dinner Roll\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Fiesta Beans | Texas Ranchero Beans (v) | Vegetable Choices | Fresh Fruit Choices | Froot Jooce Slushie
-UID:2026-10-23-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261024
-DTEND;VALUE=DATE:20261025
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-10-24-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:Otter Lake School Lunch
@@ -102,5 +53,54 @@ DTEND;VALUE=DATE:20261101
 SUMMARY:Otter Lake School Lunch
 DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
 UID:2026-10-31-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-11-01-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Choice 1: Corn Dog | Choice 2: Jumbo Cheese Ravioli (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Corn Dog\\nChoice 2: Jumbo Cheese Ravioli (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Broccoli | Fresh Sweet Mini Peppers | Fresh Orange Slices | Chilled Peaches
+UID:2026-11-02-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Choice 1: Teriyaki Meatballs with Ramen Noodles | Choice 2: Cheese Filled Breadsticks (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Teriyaki Meatballs with Ramen Noodles\\nChoice 2: Cheese Filled Breadsticks (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Green Peas | Fresh Carrots | Fresh Grapes | Chilled Mixed Fruit
+UID:2026-11-03-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Choice 1: Stuffed Crust Pepperoni Pizza | Choice 2: Stuffed Crust Cheese Pizza (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Stuffed Crust Pepperoni Pizza\\nChoice 2: Stuffed Crust Cheese Pizza (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Roasted Cauliflower | Fresh Tomatoes | Fresh Pineapple Slices | Chilled Pears
+UID:2026-11-04-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Choice 1: Beef Sloppy Joe on a Fresh Bun | Choice 2: Macaroni & Cheese (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Beef Sloppy Joe on a Fresh Bun\\nChoice 2: Macaroni & Cheese (v) | Dinner Roll\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Green Beans | Fresh Jicama Sticks | Fresh Banana | Chilled Applesauce Cup
+UID:2026-11-05-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:Choice 1: Orange Chicken | Choice 2: Cheesy French Bread Dunker (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Orange Chicken | Brown Rice\\nChoice 2: Cheesy French Bread Dunker (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Edamame | Fresh Vegetable Choices | Fresh Fruit Choices | Chilled Mandarin Oranges
+UID:2026-11-06-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-11-07-otter-lake-lunch@github
 END:VEVENT
 END:VCALENDAR
