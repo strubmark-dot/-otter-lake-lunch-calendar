@@ -6,55 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Otter Lake School Lunch
 X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261108
-DTEND;VALUE=DATE:20261109
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-11-08-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
-SUMMARY:Choice 1: Chicken Sausage Patty | Choice 2: Colby Cheese Omelet
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Sausage Patty | French Toast Sticks | Syrup\\nChoice 2: Colby Cheese Omelet | French Toast Sticks (v) | Syrup\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Glazed Carrots | Fresh Cauliflower | Fresh Orange Slices | Cinnamon Apple Slices
-UID:2026-11-09-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
-SUMMARY:Choice 1: Chicken Smackers | Choice 2: Fish Sticks
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Smackers\\nChoice 2: Fish Sticks\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Mashed Potatoes | Chicken Gravy | Fresh Celery Sticks | Fresh Kiwi | Chilled Mixed Fruit
-UID:2026-11-10-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20261112
-SUMMARY:Choice 1: Homemade Meat Sauce | Choice 2: Marinara Sauce
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Homemade Meat Sauce | Whole Grain Pasta | Warm Garlic Breadstick\\nChoice 2: Marinara Sauce | Whole Grain Pasta | Shredded Mozzarella Cheese | Warm Garlic Breadstick\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Steamed Broccoli | Caesar Salad | Fresh Apple Slices | Chilled Pears
-UID:2026-11-11-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:Choice 1: Chicken Patty | Choice 2: Vegetable Dumplings (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Chicken Patty | Spicy Chicken Patty | Fresh Bun\\nChoice 2: Vegetable Dumplings (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Crispy Tater Tots | Fresh Tomatoes | Fresh Banana | Chilled Peaches
-UID:2026-11-12-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:Choice 1: All Beef Hot Dog | Choice 2: Toasted Cheese Sandwich (v)
-DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: All Beef Hot Dog | Fresh Hot Dog Bun\\nChoice 2: Toasted Cheese Sandwich (v) | Tomato Soup\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Baked Beans | Fresh Vegetable Choices | Fresh Fruit Choices | Chilled Applesauce Cup | 🌱LOCAL JonnyPops Rainbow Juice Bar
-UID:2026-11-13-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Otter Lake School Lunch
-DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
-UID:2026-11-14-otter-lake-lunch@github
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Otter Lake School Lunch
@@ -102,5 +53,54 @@ DTEND;VALUE=DATE:20261122
 SUMMARY:Otter Lake School Lunch
 DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
 UID:2026-11-21-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-11-22-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:Choice 1: Sausage\, Egg & Cheese Maple Breakfast Sandwich | Choice 2: Cheese Pizza Crunchers (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Sausage\, Egg & Cheese Maple Breakfast Sandwich\\nChoice 2: Cheese Pizza Crunchers (v) | Marinara Sauce\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | Corn | Fresh Cucumber Slices | Fresh Orange Slices | Chilled Strawberries
+UID:2026-11-23-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Choice 1: Crunchy Chicken Strips | Choice 2: Homemade Bean and Cheese Burrito (v)
+DESCRIPTION:Otter Lake School Lunch\\n\\nChoice 1: Crunchy Chicken Strips\\nChoice 2: Homemade Bean and Cheese Burrito (v)\\nChoice 3: Deli Sandwich Choices | Vegetarian Sandwich Choice | French Fry Choices | Fresh Vegetable Choices | Fresh Apple Slices | Chilled Peaches
+UID:2026-11-24-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:\\n• No School
+UID:2026-11-25-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-11-26-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:\\n• No School
+UID:2026-11-27-otter-lake-lunch@github
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Otter Lake School Lunch
+DESCRIPTION:Otter Lake School Lunch\\n\\nFull menu:
+UID:2026-11-28-otter-lake-lunch@github
 END:VEVENT
 END:VCALENDAR
